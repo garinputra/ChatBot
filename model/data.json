@@ -1,0 +1,908 @@
+{"data": [
+    {"tag": "noanswer",
+     "patterns": [""],
+     "responses": ["Maaf, saya tidak mengerti apa yang kamu maksud.", 
+        "Maaf, untuk saat ini chatbot ini belum dapat menjawab pertanyaan kamu."],
+     "context": [""]
+    },
+    {"tag": "greeting1",
+     "patterns": ["halo"],
+     "responses": ["Halo, gimana kabarmu hari ini?"],
+     "context": [""]
+    },
+    {"tag": "greeting2",
+        "patterns": ["hello"],
+        "responses": ["Hello, gimana kabarmu hari ini?"],
+        "context": [""]
+    },
+    {"tag": "greeting3",
+        "patterns": ["hai"],
+        "responses": ["Hai, gimana kabar mu hari ini?"],
+        "context": [""]
+    },
+    {"tag": "greeting4",
+        "patterns": ["selamat pagi"],
+        "responses": ["Selamat Pagi, gimana kabar mu hari ini?"],
+        "context": [""]
+    },
+    {"tag": "greeting5",
+        "patterns": ["selamat siang"],
+        "responses": ["Selamat Siang, gimana kabar mu hari ini?"],
+        "context": [""]
+    },
+    {"tag": "greeting6",
+        "patterns": ["selamat sore"],
+        "responses": ["Selamat Sore, gimana kabar mu hari ini?"],
+        "context": [""]
+    },
+   
+    {"tag": "cemas",
+        "patterns": ["sering cemas berlebihan", "khawatir dan gelisah", "ngerasa cemas", "Resah dan gelisah"],
+        "responses": ["Aku paham sama perasaanmu, apa ada yang mau kamu ceritakan lebih lanjut?", "Apa kamu butuh solusi?"],
+        "context": ["cemas_followup"]
+    },
+
+    {"tag": "cemas_followup",
+     "patterns": ["kalo cemas harus gimana", "butuh solusi", "berikan saran"],
+     "responses": ["Kamu bisa coba beberapa untuk mengatasi rasa cemasmu, misalnya coba ambil nafas panjang, olahraga, mengobrol sama orang, melakukan hal-hal yang kamu suka, dan coba selipkan pikiran-pikiran positif. Tapi, kalo misal cemasmu udah ngga bisa kamu kontrol sendiri, coba buat berkonsultasi sama profesional ya."],
+     "context": ["cemas_followup2"]
+    },
+
+    {"tag": "cemas_followup2",
+     "patterns": ["belum berhasil", "masih cemas"],
+     "responses": ["Kalau langkah-langkah tadi belum berhasil, kamu mungkin harus coba untuk mengunjungi tenaga profesional seperti psikolog. Jangan takut dan konsultasikan masalahmu lebih detail pada mereka."],
+     "context": ["cemas_followup3"]
+     },
+
+    {"tag": "cemas_followup3",
+     "patterns": ["belum paham", "tidak paham", "jelaskan ulang"],
+     "responses": ["Ada banyak cara yang bisa kamu lakukan untuk mengatasi cemas. Misalnya, berolahraga bisa menurunkan hormon stres dan membantu pikiranmu menjadi lebih baik. Juga, mencoba untuk berbicara dengan orang lain atau melakukan hobi-hobimu bisa meredakan kecemasan."],
+     "context": ["cemas_followup_cinta"]
+    },
+
+    {
+      "tag": "cemas_followup_cinta",
+      "patterns": ["cinta", "aku suka cemas gara-gara cinta", "cinta bener-bener bikin aku cemas dan resah", "gimana ya biar ga resah karena cinta?"],
+      "responses": ["Masalah cinta memang seringkali membuat cemas. Komunikasi terbuka dan jujur sangat penting dalam hubungan. Pertimbangkan untuk berbicara dengan pasanganmu tentang perasaanmu sehingga kalian bisa memahami satu sama lain lebih baik."],
+      "context": [""]
+    },
+  
+    {
+      "tag": "cemas2",
+      "patterns": ["aku pernah cemas karena teman", "seringkali temanku membuatku cemas", "teman", "cemas sekali karena teman"],
+      "responses": ["Bicarakan masalah tersebut secara baik-baik dengan temanmu. Mungkin dengan saling terbuka, kalian bisa menemukan solusi bersama."],
+      "context": [""]
+    },
+
+    {
+      "tag": "cemas_followup_keluarga",
+      "patterns": ["keluarga", "tapi kadang keluargaku juga sering bikin aku cemas", "keluarga bikin cemas", " cemas karena keluarga"],
+      "responses": ["Coba untuk membicarakan masalah tersebut dengan keluargamu. Dengan suasana yang tepat, mungkin kamu bisa menemukan solusi bersama."],
+      "context": ["cemas_followup_uang"]
+    },
+
+    {
+      "tag": "cemas_followup_uang",
+      "patterns": ["uang", "semua cemasku ini karena uang", "uang membuat cemas"],
+      "responses": ["Tinjau kembali cara pengelolaan keuanganmu. Mungkin dengan melakukan revisi pada cara mengelola keuangan, masalah ini bisa sedikit teratasi."],
+      "context": [""]
+    },
+
+    {
+      "tag": "cemas_followup_ancaman_putus",
+      "patterns": ["aku diancam putus dengan pacarku, mau bunuh diri"],
+      "responses": ["Situasinya sangat sulit. Tetapi, dengan km bunuh diri itu bukan solusi yang baik. Ingat bahwa kamu penting dan punya nilai yang tidak terganti. Jangan jadikan cinta alasan untuk mengabaikan kebahagiaan dan kesehatanmu. Komunikasikan perasaanmu secara jujur kepada pasanganmu. Cari solusi bersama atau cari dukungan dari teman dan keluarga. Kamu pantas mendapatkan kebahagiaan dan cinta yang sehat."],
+      "context": [""]
+    },
+
+    {
+      "tag": "cemas_followup_kuliah",
+      "patterns": ["aku cemas karna udah menjelang kuliah"],
+      "responses": ["Cemas menjelang masuk kuliah itu wajar. Fokus pada satu langkah ke depan, tidak terlalu membebani diri dengan pikiran 'semua yang harus bisa aku hadapi'. Ambil satu langkah kecil setiap hari. Kamu sedang belajar dan berkembang, pasti bisa melewatinya dengan baik."],
+      "context": [""]
+    },
+
+    {"tag": "stress",
+        "patterns": ["capek", "lagi stres", "stress banget", "aku lagi stress", "stress", "capee", "cape"],
+        "responses": ["Kamu kenapa? jangan lupa istirahat, ya. Aku siap dengerin  kalo kamu mau cerita sesuatu."],
+        "context": ["stress_followup"]
+    },
+
+    {
+      "tag": "stress_followup",
+      "patterns": ["cara mengatasi stress", "solusi stress", "saran"],
+      "responses": ["Menceritakan masalahmu pada orang lain, mendekatkan diri pada spiritualitas, olahraga, dan menjaga kesehatan bisa membantu mengatasi stress. Jika stress semakin parah, pertimbangkan konsultasi dengan profesional."],
+      "context": ["stress_followup2"]
+    },
+
+    {
+      "tag": "stress_cinta",
+      "patterns": ["cinta", "sering stress karena cinta"],
+      "responses": ["Komunikasi dengan pasangan sangat penting saat menghadapi masalah cinta. Kejujuran dan pemahaman dari kedua belah pihak bisa membantu."],
+      "context": ["stress_followup2"]
+    },
+
+    {
+      "tag": "stress_keluarga",
+      "patterns": ["keluarga", "keluarga dirumah bikin stress", "keluarga dirumah bikin cape"],
+      "responses": ["Pertimbangkan untuk membicarakan masalah dan lebih terbuka dalam keluarga. Temukan waktu yang tepat untuk membicarakan hal tersebut."],
+      "context": ["stress_followup2"]
+    },
+    
+    {
+      "tag": "stress_kerjaan",
+      "patterns": ["kerjaan", "stress karena kerjaan", "stress kerja"],
+      "responses": ["Jika stressmu berasal dari pekerjaan, mungkin ambil cuti sejenak untuk istirahat bisa membantu."],
+      "context": ["stress_followup2"]
+    },
+
+    {
+      "tag": "stress_putus",
+      "patterns": ["putus", "abis putus", "stress abis putus", "aku diputusin"],
+      "responses": ["Jika perpisahan membuatmu stress, cobalah temukan kesibukan atau hal baru untuk melupakan hal tersebut."],
+      "context": ["stress_followup2"]
+    },
+
+    {
+      "tag": "stress_kampus",
+      "patterns": ["gabisa bergaul dengan orang-orang di kampus "],
+      "responses": ["Fokus pada satu langkah ke depan, jangan membebani diri dengan pikiran 'semua yang harus bisa aku hadapi'. Ambil langkah kecil setiap hari. Ingat, kamu sedang belajar dan berkembang."],
+      "context": ["stress_followup2"]
+    },
+  
+    {
+      "tag": "stress_uang",
+      "patterns": ["uang", "stress karena uang"],
+      "responses": ["Rejeki itu sudah ada yang mengatur. Meski sulit sekarang, jangan menyerah. Teruslah berusaha, mungkin suatu saat rejeki akan datang."],
+      "context": ["stress_followup2"]
+    },
+  
+    {
+      "tag": "stress_followup2_default",
+      "patterns": [
+          "Saya belum yakin bagaimana cara menerapkan solusi ini",
+          "Masih bingung dengan saran yang diberikan",
+          "Apa langkah konkret yang harus saya ambil untuk mengatasi stress?"
+      ],
+      "responses": [
+          "Saya memahami bahwa mengatasi stress bisa menjadi tantangan. Jangan ragu untuk bertanya lebih lanjut atau meminta klarifikasi pada poin tertentu. Beberapa langkah lebih lanjut yang dapat Anda pertimbangkan meliputi mencari dukungan dari teman atau keluarga, mencari kegiatan yang dapat mengalihkan perhatian dari stres, atau mencari bantuan profesional seperti seorang konselor atau psikolog."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_satu",
+      "patterns": ["Saya belum yakin bagaimana cara menerapkan solusi ini"],
+      "responses": [
+          "Tidak masalah. Mungkin Anda bisa memulai dengan langkah kecil, seperti mencoba olahraga atau hobi yang disukai, atau berbicara dengan seseorang yang Anda percayai tentang perasaan Anda. Jangan terlalu keras pada diri sendiri dan ingatlah bahwa perubahan memerlukan waktu. Jika masih bingung, pertimbangkan untuk mencari bantuan profesional untuk panduan lebih rinci sesuai dengan situasi Anda."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_dua",
+      "patterns": ["Masih bingung dengan saran yang diberikan"],
+      "responses": [
+          "Saya mengerti bahwa setiap orang berbeda dan solusi yang cocok untuk satu orang mungkin tidak cocok untuk yang lain. Jika masih bingung, pertimbangkan untuk mendekati situasi secara berbeda. Anda bisa mencoba berbicara dengan orang-orang terdekat untuk mendapatkan perspektif tambahan atau mencari nasihat profesional untuk mendapatkan pandangan yang lebih mendalam."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_tiga",
+      "patterns": ["Apa langkah konkret yang harus saya ambil untuk mengatasi stress?"],
+      "responses": [
+          "Langkah konkret pertama adalah mencoba satu atau dua solusi yang Anda rasa dapat diterapkan dengan mudah. Cobalah untuk memprioritaskan kebutuhan dan langkah-langkah yang sesuai dengan situasi Anda. Jika perlu, dapatkan dukungan dari teman, keluarga, atau profesional untuk membantu Anda melangkah maju."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_cinta",
+      "patterns": [
+          "Tidak paham dengan solusi untuk masalah cinta"
+      ],
+      "responses": [
+          "Jika masih tidak paham, coba bicarakan lebih dalam dengan pasangan Anda. Komunikasi terbuka sangat penting dalam hubungan. Jika tetap kesulitan, pertimbangkan untuk mencari bantuan dari seorang konselor atau terapis yang dapat membantu membimbing Anda melalui permasalahan dalam hubungan."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_keluarga",
+      "patterns": [
+          "Belum mengerti cara membuka diri kepada keluarga"
+      ],
+      "responses": [
+          "Membuka diri kepada keluarga memang bisa sulit. Cobalah untuk mencari waktu yang tepat dan rasa nyaman untuk membicarakan perasaan Anda. Ingatlah bahwa keluarga biasanya ingin membantu dan mendukung. Jika masih kesulitan, pertimbangkan untuk melibatkan seorang mediator atau konselor keluarga."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_kerjaan",
+      "patterns": [
+          "Bagaimana saya bisa mengambil cuti dari pekerjaan?"
+      ],
+      "responses": [
+          "Untuk mengambil cuti dari pekerjaan, pertama-tama cek kebijakan cuti di tempat Anda bekerja. Setelah itu, ajukan permintaan cuti dengan memberikan alasan yang jelas dan dapat dipahami oleh atasan Anda. Jika masih kesulitan, bicarakan dengan sumber daya manusia atau atasan Anda untuk panduan lebih lanjut."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_putus",
+      "patterns": [
+          "Saya masih merasa sulit setelah putus, ada tips lain yang bisa diberikan?"
+      ],
+      "responses": [
+          "Mengatasi perasaan setelah putus memang sulit. Selain tips sebelumnya, cobalah untuk fokus pada diri sendiri, temukan hobi baru, dan jangan ragu untuk mencari dukungan dari teman atau keluarga. Jika perasaan sulit diatasi, pertimbangkan untuk berkonsultasi dengan seorang profesional yang dapat membantu Anda melewati masa sulit ini."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_kampus",
+      "patterns": [
+          "Masih kesulitan bergaul dengan orang-orang di kampus"
+      ],
+      "responses": [
+          "Bergaul di kampus memang bisa menantang, terutama jika Anda baru memulai. Cobalah untuk mengikuti kegiatan atau klub yang sesuai dengan minat Anda, dan jangan takut untuk memulai percakapan dengan orang-orang di sekitar Anda. Jika masih kesulitan, pertimbangkan untuk mencari dukungan dari penasehat akademis atau konselor kampus."
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "stress_followup2_uang",
+      "patterns": [
+          "Tidak yakin bagaimana menghadapi masalah keuangan"
+      ],
+      "responses": [
+          "Jika masih tidak yakin menghadapi masalah keuangan, pertimbangkan untuk membuat konsultasi dengan seorang penasehat keuangan. Mereka dapat membantu menilai situasi keuangan Anda secara lebih rinci dan memberikan saran yang sesuai dengan kebutuhan Anda. Jangan ragu untuk mencari bantuan profesional dalam mengelola keuangan Anda."
+      ],
+      "context": [""]
+    },
+  
+    
+    {"tag": "sedih",
+        "patterns": ["sedih", "sedih bgt", "ngerasa sedih", "rasanya sedih", "aku sedih", "mau nangis", "pengen nangis"],
+        "responses": ["Aku paham sama perasaanmu, apa ada yang mau kamu ceritakan lebih lanjut?", "Apa yang biasanya bikin perasaanmu membaik?"],
+        "context": ["sedih_followup"]
+    },
+
+
+    {"tag": "sedih2",
+        "patterns": ["aku lagi sedih nih"],
+        "responses": ["Kamu lagi sedih kenapa? Hal apa yang buat kamu sedih?"],
+        "context": ["sedih_followup"]
+    },
+
+    {
+        "tag": "sedih_followup_default",
+        "patterns": [
+            "cara mengatasi sedih",
+            "solusi sedih"
+        ],
+        "responses": [
+            "Penting untuk menerima rasa sedihmu dan melepaskannya. Coba dengarkan lagu-lagu yang menenangkan atau menonton film. Kamu juga bisa mencurahkan isi hatimu pada orang lain atau menuliskannya di jurnal. Lakukan hal-hal yang membuat perasaanmu membaik dan selipkan pikiran positif. Jangan lupa beristirahat!"
+        ],
+        "context": ["sedih_followup3"]
+    },
+    {
+        "tag": "sedih_followup_putus",
+        "patterns": ["putus"],
+        "responses": [
+            "Gapapa, orang pasti bakal datang dan pergi kalau sudah waktunya. Gimana kalau kamu coba cari hal baru untuk dilakukan atau kesibukan lain agar pikiranmu teralihkan dari dia."
+        ],
+        "context": ["sedih_followup3"]
+    },
+    {
+        "tag": "sedih_followup_meninggal",
+        "patterns": ["meninggal"],
+        "responses": [
+            "Semua akan kembali kepada tuhan kalau sudah waktunya, kamu pasti bisa pelan-pelan mengikhlaskannya. Dia sudah bahagia di sana, kamu doakan aja yang terbaik untuk dia."
+        ],
+        "context": ["sedih_followup3"]
+    },
+    {
+        "tag": "sedih_followup_ditolak",
+        "patterns": ["ditolak"],
+        "responses": [
+            "Gapapa, kalau gitu berarti belum rejekimu aja. Semua hal pasti ada jodohnya, sabar dan tunggu saja sampai waktunya tiba. Jangan pantang menyerah dan terus mencoba yang terbaik dalam segala sesuatu ya, kalau memang untukmu, maka ia akan menghampirimu."
+        ],
+        "context": ["sedih_followup3"]
+    },
+
+    {
+        "tag": "sedih_followup3_default",
+        "patterns": [
+            "Saya masih merasa bingung setelah mencoba solusi tersebut",
+            "Belum mengerti cara mengatasi perasaan sedih",
+            "Apa langkah konkret yang harus saya ambil untuk merasa lebih baik?",
+            "Masih sulit melepaskan perasaan sedih setelah putus",
+            "Tidak tahu bagaimana mengatasi rasa sedih setelah kehilangan",
+            "Bagaimana cara mengatasi penolakan?"
+        ],
+        "responses": [
+            "Saya memahami bahwa mengatasi perasaan sedih bisa menjadi tantangan. Jangan ragu untuk bertanya lebih lanjut atau meminta klarifikasi pada poin tertentu. Beberapa langkah lebih lanjut yang dapat Anda pertimbangkan meliputi mencari dukungan dari teman atau keluarga, mencoba aktivitas yang membuat Anda bahagia, atau mendiskusikan perasaan Anda dengan seorang profesional jika perlu."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "sedih_followup3_confused",
+        "patterns": [
+            "Saya masih merasa bingung setelah mencoba solusi tersebut"
+        ],
+        "responses": [
+            "Tidak masalah. Mungkin Anda bisa mencoba solusi lain atau eksperimen dengan berbagai kegiatan yang membuat Anda merasa lebih baik. Penting untuk memberi diri Anda waktu dan ruang untuk berduka atau melepaskan perasaan sedih. Jika masih bingung, pertimbangkan untuk mencari saran dari teman atau keluarga yang Anda percayai atau berkonsultasi dengan seorang konselor."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "sedih_followup3_understand",
+        "patterns": [
+            "Belum mengerti cara mengatasi perasaan sedih"
+        ],
+        "responses": [
+            "Jika masih belum mengerti, cobalah untuk merinci perasaan Anda dan menentukan apakah ada faktor tertentu yang menyebabkan kesedihan. Setelah itu, mencoba langkah-langkah kecil seperti mencurahkan perasaan pada orang terdekat, mencari aktivitas yang menghibur, atau menulis jurnal. Jika masih kesulitan, pertimbangkan untuk mencari bantuan profesional untuk panduan lebih rinci."
+        ],
+        "context": [""]
+    },
+
+    {
+        "tag": "sedih_followup3_specific_steps",
+        "patterns": [
+            "Apa langkah konkret yang harus saya ambil untuk merasa lebih baik?"
+        ],
+        "responses": [
+            "Langkah konkret pertama adalah mengidentifikasi apa yang membuat Anda sedih dan mencoba mencari solusi yang sesuai. Cobalah untuk fokus pada kegiatan yang memberikan kebahagiaan, berkumpul dengan teman yang positif, atau mencari dukungan dari orang terdekat. Jangan ragu untuk mencari bantuan profesional jika perasaan sedih terus berlanjut atau memburuk."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "sedih_followup3_after_breakup",
+        "patterns": [
+            "Masih sulit melepaskan perasaan sedih setelah putus"
+        ],
+        "responses": [
+            "Mengatasi perasaan setelah putus memang memerlukan waktu dan kesabaran. Selain tips sebelumnya, cobalah untuk menciptakan ruang emosional untuk diri sendiri, mungkin dengan melakukan kegiatan yang Anda nikmati atau mengeksplorasi hobi baru. Jika masih kesulitan, pertimbangkan untuk mencari dukungan dari teman atau keluarga, atau berkonsultasi dengan seorang profesional."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "sedih_followup3_after_loss",
+        "patterns": [
+            "Tidak tahu bagaimana mengatasi rasa sedih setelah kehilangan"
+        ],
+        "responses": [
+            "Kehilangan seseorang memang sulit dihadapi. Sama seperti berduka setelah putus, memberi diri Anda waktu dan memperbolehkan diri untuk merasakan perasaan adalah langkah penting. Cobalah untuk berbicara dengan orang-orang yang Anda percayai, dan jika perlu, pertimbangkan untuk mencari dukungan profesional untuk membantu Anda mengatasi kehilangan ini."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "sedih_followup3_overcoming_rejection",
+        "patterns": [
+            "Bagaimana cara mengatasi penolakan?"
+        ],
+        "responses": [
+            "Mengatasi penolakan bisa menjadi proses yang sulit. Pertama, beri diri Anda izin untuk merasa sedih atau kecewa. Setelah itu, cobalah untuk memahami bahwa penolakan tidak mencerminkan nilai atau identitas Anda. Fokus pada aspek positif dalam diri Anda dan lakukan aktivitas yang meningkatkan kepercayaan diri. Jika masih kesulitan, pertimbangkan untuk berbicara dengan teman atau mencari bantuan profesional untuk memberikan perspektif tambahan."
+        ],
+        "context": [""]
+    },
+    
+
+    {"tag": "bete",
+        "patterns": ["aku lagi bete", "lagi bete nih"],
+        "responses": ["Kenapa kamu bete? Apa yang buat kamu jadi bete?"],
+        "context": ["bete_followup"]
+    },
+
+    {
+        "tag": "bete_followup",
+        "patterns": [
+            "bosan", "bosen banget", "bosen bgt", "bosennn"
+        ],
+        "responses": [
+            "Kalau kamu merasa bosan, mungkin kamu bisa coba hobi baru atau aktivitas yang belum pernah kamu lakukan sebelumnya. Ini bisa menjadi kesempatan untuk menemukan sesuatu yang baru dan menarik."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup_marah",
+        "patterns": [
+            "marah"
+        ],
+        "responses": [
+            "Marah adalah emosi yang wajar, tapi penting untuk mengelolanya dengan bijak. Jika mungkin, berikan dirimu waktu untuk merenung sejenak sebelum bereaksi. Jika kamu merasa perlu, bicarakan perasaanmu dengan seseorang yang dapat dipercaya."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup_jenuh",
+        "patterns": [
+            "jenuh"
+        ],
+        "responses": [
+            "Cobalah untuk merencanakan sesuatu yang baru, seperti pergi ke tempat baru atau mencoba aktivitas yang belum pernah kamu lakukan sebelumnya. Ini bisa membantu menyegarkan pikiranmu."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup_salah_sendiri",
+        "patterns": [
+            "salah sendiri"
+        ],
+        "responses": [
+            "Coba belajar memaafkan diri sendiri dan mencari sisi positifnya. Semua orang pasti melakukan salah, maka dari itu kamu harus memaafkan diri sendiri dan menjadikan kesalahan tadi sebagai pelajaran agar kedepannya lebih hati-hati"
+        ],
+        "context": ["bete_followup"]
+    },
+    
+    {
+        "tag": "bete_followup2_bete",
+        "patterns": [
+            "Saya masih tidak tahu cara mengatasi rasa bete ini"
+        ],
+        "responses": [
+            "Saya memahami bahwa mengatasi rasa bete bisa menjadi tantangan. Jangan ragu untuk bertanya lebih lanjut atau meminta klarifikasi pada poin tertentu. Beberapa langkah lebih lanjut yang dapat Anda pertimbangkan meliputi mencari hobi baru, mengekspresikan emosi melalui seni atau olahraga, atau berbicara dengan teman atau keluarga untuk mendapatkan dukungan."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup2_belum_mengerti_solusi",
+        "patterns": [
+            "Belum mengerti solusi bete yang diberikan"
+        ],
+        "responses": [
+            "Jika masih belum mengerti, mungkin Anda bisa mencoba metode yang lebih spesifik. Contohnya, mencari tahu jenis hobi atau aktivitas yang memang Anda nikmati, atau mencoba teknik relaksasi seperti meditasi atau pernapasan dalam. Setiap orang berbeda, jadi yang penting adalah menemukan cara yang cocok untuk diri Anda sendiri."
+        ],
+        "context": ["bete_followup2"]
+    },
+
+    {
+        "tag": "bete_followup2_tidak_yakin_melampiaskan_emosi",
+        "patterns": [
+            "Tidak yakin bagaimana melampiaskan emosi bete"
+        ],
+        "responses": [
+            "Melampiaskan emosi bete bisa melalui berbagai cara, tergantung pada preferensi masing-masing. Anda bisa mencoba olahraga, seni, atau aktivitas yang membuat Anda senang. Percayalah, menemukan cara yang efektif memerlukan eksperimen dan penyesuaian. Jangan ragu untuk mencari dukungan atau saran lebih lanjut jika dibutuhkan."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup2_masih_bingung_mengatasi_kebosanan",
+        "patterns": [
+            "Masih bingung dengan cara mengatasi kebosanan"
+        ],
+        "responses": [
+            "Jika masih bingung, cobalah mencari inspirasi dari kegiatan atau hobi orang lain. Anda bisa mencoba kegiatan baru, mengikuti kursus online, atau menjelajahi tempat-tempat yang belum pernah Anda kunjungi. Penting untuk terbuka terhadap pengalaman baru untuk mengatasi kebosanan."
+        ],
+        "context": ["bete_followup2"]
+    },
+
+    {
+        "tag": "bete_followup2_sulit_mengelola_rasa_marah",
+        "patterns": [
+            "Sulit mengelola rasa marah"
+        ],
+        "responses": [
+            "Mengelola rasa marah memang tidak mudah. Coba praktikkan teknik-teknik relaksasi seperti pernapasan dalam, berjalan-jalan sejenak untuk memberikan ruang bagi diri sendiri, atau jika memungkinkan, bicarakan perasaan Anda dengan seseorang yang dapat dipercaya. Menerima dan memahami emosi juga merupakan langkah penting."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup2_tidak_tahu_mengatasi_perasaan_jenuh",
+        "patterns": [
+            "Tidak tahu bagaimana mengatasi perasaan jenuh"
+        ],
+        "responses": [
+            "Jika masih merasa jenuh, cobalah merencanakan sesuatu yang baru dan menarik. Aktivitas yang menantang atau menghadirkan kebaruan dapat membantu mengatasi perasaan jenuh. Jangan ragu untuk mencari saran atau dukungan dari orang terdekat jika diperlukan."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup2_masih_sulit_memaafkan_diri_sendiri",
+        "patterns": [
+            "Masih sulit memaafkan diri sendiri"
+        ],
+        "responses": [
+            "Memaafkan diri sendiri memang bisa sulit. Cobalah untuk mengenali dan menerima kesalahan sebagai bagian dari pembelajaran. Fokus pada perbaikan diri dan tindakan positif untuk masa depan. Jika perlu, bicarakan perasaan Anda dengan teman atau profesional yang dapat memberikan pandangan objektif."
+        ],
+        "context": ["bete_followup2"]
+    },
+    {
+        "tag": "bete_followup2_final",
+        "patterns": [
+            "Terima kasih"
+        ],
+        "responses": [
+            "Tidak masalah! Jika Anda memiliki pertanyaan lain atau butuh lebih banyak bantuan, jangan ragu untuk bertanya. Semoga hari Anda menyenangkan!"
+        ],
+        "context": ["bete_followup2"]
+    },
+    
+
+    {"tag": "tidur",
+        "patterns": ["tidur ga nyenyak ", "ga bisa tidur", "tidur gelisah"],
+        "responses": ["Tidur yang cukup itu perlu, loh. Belakangan ini, ada hal yang ganggu pikiranmu?"],
+        "context": ["tidur_followup"]
+    },
+
+    {
+        "tag": "tidur_followup_masalah_tidur",
+        "patterns": [
+            "masalah tidur"
+        ],
+        "responses": [
+            "Kalau kamu mengalami kesulitan tidur, coba untuk menciptakan rutinitas sebelum tidur yang tenang. Mungkin dengan mandi air hangat, membaca buku yang tidak terlalu merangsang, atau mencoba teknik relaksasi seperti pernapasan dalam."
+        ],
+        "context": ["tidur_followup"]
+    },
+    {
+        "tag": "tidur_followup_butuh_saran",
+        "patterns": [
+            "butuh saran untuk tidur",
+            "solusi agar tidur lebih nyenyak"
+        ],
+        "responses": [
+            "Apakah kamu pernah mencoba teknik meditasi sebelum tidur? Ini bisa membantu menenangkan pikiran dan meningkatkan kualitas tidur.",
+            "Mendengarkan musik relaksasi atau suara alam sebelum tidur dapat menjadi cara yang baik untuk menciptakan lingkungan yang kondusif untuk tidur."
+        ],
+        "context": ["tidur_followup"]
+    },
+    {
+        "tag": "tidur_followup_cara_mengatasi_sulit_tidur",
+        "patterns": [
+            "gimana cara mengatasi sulit tidur"
+        ],
+        "responses": [
+            "Jika masalah tidur berlanjut, pertimbangkan untuk berkonsultasi dengan dokter atau ahli tidur. Mereka bisa memberikan evaluasi lebih mendalam dan solusi yang lebih spesifik sesuai dengan situasimu."
+        ],
+        "context": ["tidur_followup"]
+    },
+    
+      
+    {"tag": "badmood",
+        "patterns": ["lagi badmood", "tiba tiba badmood", "nggak mood", "gamood", "gamood banget"],
+        "responses": ["Kenapa badmood? Ada sesuatu yang bikin kamu kepikiran?", "Kamu mau coba cerita masalahmu?"],
+        "context": ["badmood_followup"]
+    },
+
+    {
+        "tag": "badmood_followup",
+        "patterns": [
+          "ngilangin badmood",
+          "butuh saran badmood",
+          "solusi biar nggak badmood",
+          "gimana cara meredakan badmood"
+        ],
+        "responses": [
+          "Coba keluar dan berjalan-jalan sejenak. Terkadang udara segar dan perubahan lingkungan dapat membantu meredakan suasana hatimu.",
+          "Menghubungi teman atau keluarga untuk berbicara bisa menjadi cara yang baik untuk mengurangi badmood. Mereka mungkin bisa memberikan dukungan atau perspektif yang diperlukan.",
+          "Jika suka seni, mencoba melukis atau membuat sesuatu dapat menjadi cara yang baik untuk mengalihkan perhatian dari badmood.",
+          "Cari hiburan positif, seperti menonton video lucu atau mendengarkan musik yang menghibur. Terkadang, keceriaan kecil dapat membuat perbedaan besar.",
+          "Cobalah teknik relaksasi seperti meditasi atau pernapasan dalam untuk membantu menenangkan pikiran dan mengurangi rasa stres.",
+          "Buat daftar hal-hal yang kamu syukuri. Fokus pada positif dapat membantu mengubah suasana hati.",
+          "Jika badmood berlanjut, pertimbangkan untuk berkonsultasi dengan seorang profesional atau konselor untuk mendapatkan dukungan tambahan.",
+          "Apakah ada cara khusus yang ingin kamu coba atau topik tertentu yang ingin kamu diskusikan untuk membantu mengatasi badmoodmu?"
+        ],
+        "context": ["badmood_followup_response"]
+      },
+      {
+        "tag": "badmood_followup_response",
+        "patterns": [
+          "iya",
+          "oke",
+          "baiklah",
+          "saya akan coba",
+          "terima kasih"
+        ],
+        "responses": [
+          "Semoga saran ini dapat membantu mengatasi badmoodmu. Jangan ragu untuk kembali jika ada yang perlu kamu bicarakan atau jika kamu butuh dukungan tambahan.",
+          "Bagus! Jika ada hal lain yang ingin kamu diskusikan atau jika kamu membutuhkan saran lebih lanjut, saya di sini untuk membantu.",
+          "Terima kasih sudah mencoba saran tersebut. Jangan ragu untuk kembali jika ada yang perlu dibicarakan atau jika kamu memerlukan dukungan lebih lanjut."
+        ],
+        "context": [""]
+      },      
+
+    {"tag": "mendengar",
+        "patterns": ["saya butuh seseorang untuk mendengarkan", "perlu pendengar", "butuh teman bicara"],
+        "responses": ["Aku di sini untuk mendengarkan. Ceritakan apa yang kamu rasakan."],
+        "context": [""]
+    },
+
+    {"tag": "selfcare",
+        "patterns": ["bagaimana cara self-care", "self-care", "strategi self-care","menurutmu apakah selfcare itu penting?"],
+        "responses": ["Self-care itu penting. Apakah kamu tertarik dengan tips atau ide self-care yang bisa kucarikan untukmu?"],
+        "context": ["selfcare_followup"]
+    },
+    {"tag": "selfcare_followup",
+        "patterns": ["Ya, aku tertarik", "Tolong berikan beberapa tips", "Iya, aku mau tahu lebih lanjut"],
+        "responses": ["Tentu! Beberapa tips self-care yang bisa kamu coba adalah menjaga tidur yang cukup, melakukan aktivitas yang kamu sukai, dan berolahraga secara teratur."],
+        "context": ["selfcare_followup_response"]
+    },
+
+    {
+        "tag": "selfcare_followup_response",
+        "patterns": [
+          "Belum terlalu paham",
+          "Bisa berikan contoh lain?",
+          "Saya butuh ide yang lebih spesifik"
+        ],
+        "responses": [
+          "Tentu, self-care dapat mencakup berbagai hal seperti menciptakan rutinitas harian yang menyenangkan, memberi diri waktu untuk merenung, atau mencoba kegiatan kreatif seperti melukis atau menulis. Tujuannya adalah memberi dirimu waktu dan perhatian yang layak untuk memperbaiki kesejahteraan mental dan fisikmu. Apakah ada area khusus atau jenis self-care tertentu yang ingin kamu ketahui lebih banyak?"
+        ],
+        "context": [""]
+      }, 
+
+    {"tag": "stigma",
+        "patterns": ["bagaimana mengatasi stigma", "stigma kesehatan mental", "menghadapi stigma"],
+        "responses": ["Mengatasi stigma itu tidak mudah, tapi kita bisa membicarakannya. Apa yang ingin kamu ketahui tentang menghadapi stigma? "],
+        "context": ["stigma_followup"]
+    },
+    {"tag": "stigma_followup",
+        "patterns": ["Apa efek negatif dari stigma?", "Bagaimana mengubah persepsi masyarakat?", "Strategi mengatasi diskriminasi"],
+        "responses": ["Stigma bisa memengaruhi kesehatan mental seseorang dan membuat sulit untuk mencari bantuan. Mengedukasi dan membuka percakapan bisa menjadi langkah awal untuk mengubah persepsi masyarakat terhadap stigma."],
+        "context": ["stigma_followup2"]
+    },
+    {"tag": "stigma_followup2",
+        "patterns": ["Bagaimana cara mendukung seseorang yang mengalami stigma?", "Tanda-tanda seseorang mengalami dampak stigma", "Cara mengurangi stigma di lingkungan sekitar"],
+        "responses": ["Mendukung seseorang yang mengalami stigma bisa dimulai dengan mendengarkan tanpa menghakimi, memberikan dukungan tanpa syarat, dan menumbuhkan pemahaman tentang kondisi kesehatan mental. Mengurangi stigma di lingkungan sekitar membutuhkan edukasi dan promosi kesetaraan dalam perawatan kesehatan mental."],
+        "context": [""]
+    },
+    {"tag": "berdamai",
+        "patterns": ["cara berdamai dengan diri sendiri", "menjalin damai", "penerimaan diri", "gimana ya caranya bisa berdamai dengan diri sendiri?"],
+        "responses": ["Penerimaan diri itu penting. Bagaimana aku bisa membantu dalam perjalananmu untuk menjalin kedamaian dengan dirimu sendiri?"],
+        "context": ["bedamai_followup1"]
+    },
+    {"tag": "berdamai_followup1",
+        "patterns": ["Tanda-tanda ketika seseorang telah berdamai dengan dirinya", "Langkah-langkah menerima diri", "Perubahan setelah menjalin kedamaian dengan diri sendiri"],
+        "responses": ["Seseorang mungkin telah berdamai dengan dirinya ketika mereka merasa lebih tenang, menerima kelebihan dan kekurangan mereka, serta mampu menjalani hidup tanpa terlalu banyak pertentangan batin."],
+        "context": ["berdamai_followup2"]
+    },
+    {"tag": "berdamai_followup2",
+        "patterns": ["Apa manfaat dari penerimaan diri?", "Strategi untuk mencapai kedamaian batin", "Cara menjaga perasaan damai setiap hari"],
+        "responses": ["Penerimaan diri membawa kebahagiaan, pengurangan stres, dan meningkatkan kesejahteraan mental. Menjaga perasaan damai setiap hari bisa dilakukan dengan meditasi, olahraga, atau menulis jurnal."],
+        "context": ["berdamai_followup3"]
+    },
+    {"tag": "berdamai_followup3",
+        "patterns": ["Bagaimana menghadapi tantangan dalam menerima diri sendiri?", "Cara mengatasi perasaan tidak puas dengan diri", "Tantangan menjalani proses penerimaan diri"],
+        "responses": ["Menerima diri sendiri bisa sulit, tapi melihat tantangan sebagai peluang pertumbuhan dan mempraktikkan kesadaran diri bisa membantu mengatasi perasaan tidak puas dengan diri."],
+        "context": [""]
+    },
+    {"tag": "mindfulness",
+        "patterns": ["cara berlatih mindfulness", "praktik mindfulness", "manfaat mindfulness"],
+        "responses": ["Mindfulness bisa membantu menenangkan pikiran. Apakah kamu tertarik untuk mencoba latihan sederhana mindfulness?"],
+        "context": ["mindfulness_followup2"]
+    },
+    {"tag": "mindfulness_followup2",
+        "patterns": ["Bagaimana cara menerapkan mindfulness dalam kehidupan sehari-hari?", "Mindfulness di tempat kerja", "Cara menjaga konsistensi dalam latihan mindfulness"],
+        "responses": ["Mindfulness dalam kehidupan sehari-hari bisa dimulai dengan fokus pada pernapasan, kesadaran terhadap aktivitas yang dilakukan, dan mengurangi multitasking. Di tempat kerja, latihan pernapasan dan mengatur waktu bisa membantu."],
+        "context": ["mindfulness_followup3"]
+    },
+    {"tag": "mindfulness_followup3",
+        "patterns": ["Apakah latihan mindfulness cocok untuk semua orang?", "Mindfulness untuk anak-anak", "Apakah ada waktu yang ideal untuk berlatih mindfulness?"],
+        "responses": ["Meskipun cocok untuk banyak orang, latihan mindfulness mungkin tidak sesuai dengan semua orang. Anak-anak juga bisa berlatih mindfulness dengan pendekatan yang sesuai dengan usia mereka. Tidak ada waktu yang tepat, tapi konsistensi dalam latihan sangat penting."],
+        "context": ["mindfulness_goodbye"]
+    },
+    {"tag": "mindfulness_goodbye",
+        "patterns": ["Terima kasih, aku akan mencoba", "Saya sudah mendapat cukup informasi", "Terima kasih atas waktunya"],
+        "responses": ["Tentu, semoga latihan mindfulness membawa manfaat bagi Anda. Jika Anda memiliki pertanyaan lebih lanjut, jangan ragu untuk bertanya kapan saja. Sampai jumpa!"],
+        "context": [""]
+    },
+    {"tag": "kegiatan_positif",
+        "patterns": ["Apa kegiatan positif yang bisa dilakukan?", "Saran kegiatan positif", "Aktivitas yang bisa mengangkat mood"],
+        "responses": ["Mungkin kamu bisa mencoba yoga, meditasi, atau sekadar berjalan-jalan di taman untuk mengangkat mood."],
+        "context": ["kegiatan_positif_followup1"]
+    },
+    {"tag": "kegiatan_positif_followup1",
+        "patterns": ["Bagaimana menemukan kegiatan yang cocok?", "Aktivitas positif untuk hari-hari stres", "Kegiatan yang bisa dilakukan bersama keluarga"],
+        "responses": ["Menemukan kegiatan yang cocok bisa dimulai dari eksplorasi minat dan hobi. Untuk mengatasi hari-hari stres, coba melukis, mendengarkan musik, atau menulis. Berkegiatan bersama keluarga seperti piknik atau bermain game juga bisa sangat positif."],
+        "context": ["kegiatan_positif_followup2"]
+    },
+    {"tag": "kegiatan_positif_followup2",
+        "patterns": ["Bagaimana menjaga konsistensi dalam melakukan kegiatan positif?", "Kegiatan yang bisa dilakukan di rumah", "Aktivitas untuk meningkatkan kreativitas"],
+        "responses": ["Konsistensi bisa dipertahankan dengan membuat jadwal atau rutinitas harian yang melibatkan kegiatan positif. Di rumah, aktivitas seperti memasak, membaca buku, atau belajar hal baru bisa menjadi pilihan. Untuk meningkatkan kreativitas, mencoba berbagai seni seperti melukis atau menulis cerita bisa membantu."],
+        "context": ["kegiatan_positif_followup3"]
+    },
+    {"tag": "kegiatan_positif_followup3",
+        "patterns": ["Apakah kegiatan positif membantu dalam meningkatkan kesehatan mental?", "Manfaat dari kegiatan positif", "Bagaimana kegiatan positif mempengaruhi suasana hati?"],
+        "responses": ["Ya, kegiatan positif memiliki manfaat besar untuk kesehatan mental. Mereka bisa meningkatkan suasana hati, mengurangi stres, dan memberikan perasaan kesejahteraan yang lebih baik secara keseluruhan."],
+        "context": [""]
+    },
+    {"tag": "kegiatan_positif_end",
+        "patterns": ["Saya akan mencoba beberapa aktivitas tersebut", "Tidak ada lagi yang ingin saya tanyakan"],
+        "responses": ["Tentu, semoga aktivitas positif tersebut membantu meningkatkan suasana hati Anda. Jika ada pertanyaan lain atau Anda memerlukan saran lainnya, jangan ragu untuk kembali. Sampai jumpa!"],
+        "context": [""]
+    },
+    {"tag": "teknik_relaksasi",
+        "patterns": ["Teknik relaksasi yang efektif", "gimana cara meredakan stres dengan cepat", "Latihan relaksasi sederhana"],
+        "responses": ["Kamu bisa lakuin beberapa hal ini loh, contohnya dengan latihan pernapasan, meditasi, atau yoga bisa membantu meredakan stres. Apakah kamu tertarik mencoba teknik relaksasi tertentu?"],
+        "context": [""]
+    },
+    {"tag": "curhat",
+        "patterns": ["aku mau cerita", "butuh teman bicara", "pengen cerita"],
+        "responses": ["Kamu punya sesuatu buat diceritain? Aku di sini siap buat dengerin."],
+        "context": ["curhat_followup1"]
+    },
+    { "tag": "curhat_followup1",
+        "patterns": ["Ada yang mengganggu pikiran", "Aku merasa kesepian", "Butuh saran"],
+        "responses": ["Sudahkah kamu berbicara dengan seseorang tentang perasaanmu? Mungkin aku bisa membantu memberikan saran jika kamu mau."],
+        "context": ["curhat_followup2"]
+    },
+    {"tag": "curhat_followup2",
+        "patterns": ["Apa yang bisa aku lakukan jika merasa sedih?", "Bagaimana mengatasi stres?", "Saran untuk menghadapi masalah"],
+        "responses": ["Mendengarkan musik, berolahraga, atau menulis jurnal mungkin bisa membantu meredakan stres. Ada banyak cara untuk menghadapi masalah, tergantung pada situasi masing-masing."],
+        "context": ["curhat_end"]
+    },
+    {"tag": "curhat_end",
+        "patterns": ["Terima kasih, sudah cukup", "Saya merasa lebih baik sekarang", "Sudah tidak ada yang ingin saya ceritakan"],
+        "responses": ["Tidak masalah. Jika kamu butuh tempat untuk curhat lagi nanti, aku di sini. Jaga dirimu baik-baik. Sampai jumpa!"],
+        "context": [""]
+    },
+    {"tag": "terapi",
+        "patterns": ["mencari terapi", "konseling", "psikolog terdekat"],
+        "responses": ["Adakah yang bisa aku bantu, misalnya mencarikan informasi tentang psikolog terdekat?"],
+        "context": [""]
+    },
+    {"tag": "tekanan",
+        "patterns": ["bagaimana mengurangi tekanan", "mengatasi tekanan", "mengelola tekanan"],
+        "responses": ["Tekanan hidup bisa terasa berat. Apakah ada cara khusus yang ingin kamu pelajari untuk mengelola tekanan tersebut?"],
+        "context": [""]
+    },
+    {"tag": "dukungan_sosial",
+        "patterns": ["Pentingnya dukungan sosial", "Bagaimana mencari dukungan sosial?", "Manfaat memiliki teman bicara"],
+        "responses": ["Memiliki orang-orang terdekat untuk berbagi bisa sangat membantu. Kamu bisa mencari dukungan dari teman, keluarga, atau profesional."],
+        "context": [""]
+    },
+    {"tag": "krisis_mental",
+        "patterns": ["Cara menghadapi krisis mental", "Mengatasi keadaan darurat mental", "Apa yang harus dilakukan saat krisis mental?"],
+        "responses": ["Saat dalam krisis, penting untuk mencari bantuan segera. Kamu bisa menghubungi nomor darurat atau profesional kesehatan mental."],
+        "context": [""]
+    },
+    {"tag": "positivitas",
+        "patterns": ["Bagaimana menjaga pikiran positif?", "Tips agar selalu positif", "Cara menghindari pikiran negatif"],
+        "responses": ["Menjaga pikiran positif bisa dengan mempraktikkan rasa syukur, mencatat hal-hal baik, dan mengelilingi diri dengan hal-hal yang membangkitkan semangat."],
+        "context": [""]
+    },
+    
+    {"tag": "tuntutan_orangtua",
+        "patterns": [
+            "tuntutan orangtua",
+            "belakangan ini banyak tugas ditambah tuntutan orang tua untuk dapat nilai bagus dan lain lain",
+            "disuruh mendapat nilai bagus dan dituntut untuk berprestasi",
+            "aku masih belum paham cara menghadapi tuntutan orang tua"
+    ],
+        "responses": [
+            "coba cari waktu dan bicarakan baik-baik dengan orang tuamu tentang masalah tersebut, berikan alasan yang masuk akal serta bukti-bukti pendukung yang dapat membuat mereka memihak padamu. Jangan langsung terpancing emosi dan mudah menyerah saat menghadapi argumen dari orang tuamu.",
+            "haloo,terima kasih udah bercerita,tenang dulu tenang. ortumu nuntut buat ipk atau nilai tinggi? coba dijelasin kalo di kampus itu dpt nim segitu berarti mujizat apalagi ini kan lagi musim banyak tugas jadi wajar blm bisa maksimal ngejar nilai. lagian km juga udah serius kuliah, tugas juga sesuai deadline. gini deh, mending kamu bikin manajemen waktu isinya kapan nugas, belajar, jangan lupa sediain waktu pribadi, bisa diisi hobi atau apapun itu, kamu kan suka ngegame atau nonton jadi misal belajar 2 jam nugas 1-2 jam diselingin dulu 1 jam. km juga perlu nilai kemampuan kamu seberapa buat ngerjain sesuatu supaya ke dpn km ga kecewa sama hasilnya, ngmng juga sama ortumu. jangan kepikiran bunuh diri, banyak yang masih butuh kamu dan impian yang perlu kamu gapai. semangattttt",
+            "Hmmm, mungkin orang tua mu ingin kamu menjadi anak yang pintar dan berprestasi, namun kamu bisa menjelaskan kepada mereka kalau emang di sekolah kamu itu sangat sulit mendapat nilai bagus, dan  juga sudah melakukan usaha terbaik mu. Semangat untuk kamuu",
+            "Tenang, memahami tuntutan orang tua bisa menjadi sulit. Coba untuk berkomunikasi dengan mereka, sampaikan perasaan dan alasanmu dengan jelas. Bisa juga minta saran dari kakak atau sahabat yang mungkin pernah mengalami hal serupa. Ingat, orang tua biasanya menginginkan yang terbaik untuk anak-anak mereka, meskipun terkadang cara mereka menyampaikan bisa terasa sulit. Jangan ragu untuk meminta dukungan dan berbicara terbuka dengan orang-orang terpercaya di sekitarmu."
+
+        ],
+        "context": [""]
+    },
+    
+    {"tag": "mengatur_waktu",
+        "patterns": [" aku mengalami kesulitan dalam mengatur waktu belajar ku "],
+        "responses": ["kenapa kamu bisa kesulitan?"],
+        "context": ["mengatur_waktu_followup"]
+    },
+
+    {"tag": "mengatur_waktu_followup",
+    "patterns": [
+        "Ketika belajar entah kenapa aku sering membuka aplikasi lainnya",
+        "tugas banyak",
+        "menunda-nunda",
+        "aku masih belum paham cara mengatur waktu dengan baik"
+
+],
+    "responses": [
+        "Hmm, sebaiknya kamu membuat management time. Jadi ada waktu kamu bermain game ada waktu bermain medsos dan kapan belajar. Misal aja kamu belajar 2 jam, lalu istirahat bermain medsos selama 1 jam, namun jangan lupa ketika kamu selesai beristirahat kamu harus kembali fokus belajar. Jika setelah menerapkan cara ini kamu masih kesulitan kamu bisa kunjungi psikolog terdekat . Semangat yaaa",
+        "Sebaiknya kamu membuat to do list dan menyesuaikan pengerjaan tugas-tugas tersebut berdasarkan prioritas tenggat waktunya.",
+        "Jika kamu kesulitan mengatur waktu karena sering menunda-nunda, coba terapkan tenggat waktu untuk dirimu sendiri. Prioritaskan tugas-tugas yang penting dan mendesak terlebih dahulu dan pastikan lingkungan belajarmu nyaman. Kamu juga bisa mencoba memotivasi dirimu dengan memberi reward pada diri sendiri",
+        "Tidak masalah! Mengatur waktu memang bisa menjadi hal yang menantang. Cobalah untuk mulai dengan membuat jadwal harian atau mingguan. Tentukan waktu untuk belajar, istirahat, dan kegiatan lainnya. Jangan ragu untuk meminta bantuan teman atau guru jika kamu merasa kesulitan. Ingat, proses belajar mengatur waktu memerlukan waktu dan konsistensi. Tetap semangat!"
+    ],
+    "context": [""]
+},
+
+{"tag": "mood_makan",
+        "patterns": ["aku ga mood makan"],
+        "responses": ["hmm mungkin bisa karna stres atau km sakit? coba periksa ke dokter dulu. kalau km stres coba dicari apa yang bikin stres. mungkin dari banyaknya tugas kuliah atau dari relasimu sama org. km bisa coba mulai mengatur waktu kuliah dengan lebih baik atau bicara dengan orang yang punya masalah sm km. Apa kamu bisa ceritakan lebih lanjut?"],
+        "context": ["mood_makan_followup"]
+    },
+
+    {"tag": "mood_makan_followup",
+    "patterns": [
+        "karena stress",
+        "bosan dengan menu makanan",
+        "obat",
+        "aku masih belum paham cara mengatur pola makan"
+
+],
+    "responses": {
+        "karena stress" :["Stress memang dapat membuat nafsu makan memburuk. Namun, ingatlah bahwa pola makanmu harus tetap terjaga. paksa dirimu untuk makan jika memungkinkan. Kamu juga harus perlahan mengatasi rasa stress mu dengan berbagai metode misalnya meditasi, melakukan hobi, olahraga, atau jika semakin parah sebaiknya kamu berkonsultasi pada tenaga profesional"],
+        "bosan dengan menu makanan" : ["Jika kamu bosan dengan menu makanan yang ada, kamu bisa mencoba untuk memasak atau membeli menu yang baru. Jangan ragu untuk bereksperimen dan selamat mencoba!"],
+        "obat" : ["Jika kamu mengalami masalah nafsu makan karena pengaruh obat-obatan, kamu bisa mengkonsultasikannya pada tenaga profesional agar mengetahui tindakan apa yang sebaiknya diambil. Namun, jika memungkinkan untuk berhenti mengonsumsi obat tersebut, sebaiknya mulai dikurangi sedikit demi sedikit."],
+        "aku masih belum paham cara mengatur pola makan": [
+            "Tidak masalah! Mengatur pola makan terkadang memang sulit. kamu bisa mencoba untuk menyeimbangkan suasana hati agar tidak mempengaruhi pola makanmu, memasak atau makan makanan baru agar tidak bosan dengan menu yang ada. kamu mungkin juga bisa mecoba memasang reminder untuk jam-jam makan agar lebih teratur. Jika dirasa mood makanmu semakin buruk, kamu sebaiknya menghubungi tenaga profesional dan berkonsultasi lebih lanjut. "
+        ]
+    },
+    "context": [""]
+},
+
+{"tag": "emosi",
+        "patterns": ["kenapa ya aku suka emosi belakangan ini?"],
+        "responses": ["kalo km ngerasa gitu, bisa jadi karena lagi banyak faktor yang bikin kamu jadi lebih sensitif. coba deh km cari tahu apa yang bikin km emosi dan cari cara buat ngelola emosi itu. coba teknik pernapasan atau ngalihin perhatian dengan ngelakuin hal yang km suka. penting juga ceritain perasaanmu ke temen-temen terdekatmu, mereka pasti ngerti dan mau bantu km kok"],
+        "context": [""]
+    },
+
+     
+    {"tag": "capek",
+        "patterns": [" capek", "lelah"],
+        "responses": ["terasa melelahkan ya. Kalau boleh tahu, apakah ada hal spesifik yang membuat Anda merasa begitu lelah? Ingat, mengambil waktu untuk beristirahat dan merawat diri sendiri itu penting. Kadang, berbagi perasaan dan pikiran bisa membantu meringankan beban. Saya di sini untuk mendengarkan"],
+        "context": ["capek_followup"]
+    },
+
+    {"tag": "capek_followup",
+    "patterns": [
+        "saya lelah kerja terus",
+        "stress"
+],
+    "responses": {
+        "saya lelah kerja terus" :["Saya mengerti bahwa bekerja terus-menerus dapat sangat melelahkan, dan penting bagi kita untuk mengenali batas tubuh dan pikiran. Untuk mengurangi kelelahan, pertimbangkan langkah-langkah berikut: pastikan Anda mendapatkan tidur yang cukup, luangkan waktu untuk aktivitas yang Anda nikmati, atur ulang jadwal kerja jika perlu, lakukan aktivitas fisik ringan, konsumsi makanan bergizi, batasi tekanan kerja dengan mengatakan 'tidak' pada tugas yang berlebihan, dan pertimbangkan untuk berbicara dengan profesional kesehatan jika kelelahan terus-menerus mengganggu kehidupan sehari-hari. Ingatlah, merawat diri sendiri adalah langkah yang penting, dan Anda tidak sendirian dalam perjuangan ini."],
+        "stress" : ["Untuk mengatasi kelelahan akibat stres, perubahan gaya hidup dan manajemen stres menjadi kunci. Pastikan Anda mendapatkan tidur berkualitas, atur waktu istirahat selama hari, dan lakukan latihan fisik teratur seperti berjalan kaki atau yoga. Terapkan teknik relaksasi seperti meditasi, atur prioritas tugas, dan luangkan waktu untuk aktivitas yang menyenangkan. Hindari stimulan berlebihan seperti kafein, bicarakan perasaan dengan orang terpercaya, dan manajemen waktu dengan baik. Jika stres berlanjut, hindari prokrastinasi, dan pertimbangkan untuk mencari bantuan profesional seperti konselor atau terapis. Perubahan ini, bersama dengan manajemen stres yang efektif, dapat membantu mengatasi kelelahan yang disebabkan oleh stres, tetapi jika masalah berlanjut, berkonsultasilah dengan profesional kesehatan."]
+    },
+    "context": [""]
+},
+
+{"tag": "finansial",
+        "patterns": ["aku pusing uang", "masalah keuangan"],
+        "responses": ["Bisakah kamu menceritakan lebih detail penyebabnya?"],
+        "context": ["finansial_followup"]
+    },
+
+    {"tag": "finansial_followup",
+    "patterns": [
+        "aku habis kalah judi",
+        " aku stress karena kehabisan uang",
+        "kebanyakan utang",
+        "harga naik",
+        "saya masih belum paham"
+
+],
+    "responses": {
+        "default" : ["Untuk mengatasi masalah keuangan, langkah pertama adalah mengevaluasi situasi keuangan dengan membuat daftar pendapatan, pengeluaran, utang, dan aset. Selanjutnya, buat anggaran yang realistis, fokus pada kebutuhan dasar, dan prioritas pembayaran utang. Kurangi utang dengan mempertimbangkan strategi seperti konsolidasi atau negosiasi suku bunga. Selalu berupaya membangun dana darurat yang mencukupi untuk mengatasi keadaan darurat."],
+        "aku habis kalah judi" :["Saya sangat menyesal mendengar tentang kekalahan dalam judi, yang dapat menimbulkan emosi negatif dan stres. Penting untuk mengakui dan menerima emosi tersebut, tidak menyalahkan diri sendiri secara berlebihan, serta mengatur ulang prioritas keuangan jika perlu. Mencari dukungan dari teman atau keluarga, dan jika diperlukan, mendapatkan bantuan profesional, dapat membantu mengatasi dampak judi. Gunakan pengalaman ini sebagai peluang untuk refleksi dan pembelajaran, temukan aktivitas alternatif yang memuaskan, dan pertimbangkan dampak jangka panjang judi pada kehidupan. Jika kendali terhadap kebiasaan judi sulit diatasi, sangat disarankan mencari bantuan profesional, karena mengelola atau menghentikan kebiasaan judi memerlukan dukungan yang tepat. Ingatlah, mengambil langkah untuk merasa lebih baik adalah tanda kekuatan, bukan kelemahan, dan Anda berhak mendapatkan bantuan serta dukungan dalam menghadapi situasi ini."],
+        " aku stress karena kehabisan uang" : ["aku ngerti banget gimana rasanya. apalagi kalau masih pertengahan bulan. jadi, kamu harus mulai mengatur pemasukan dan pengeluaran kamu. terus kalau kamu sudah mulai merasa stres, coba cerita ke orang terdekat kamu deh siapa tau mereka bisa bantu secara finansial. km ga sendirian kok, orang disekitarmu banyak yg mau bantu km."],
+        "kebanyakan utang" : ["Jika kamu merasa pusing karena terlalu banyak utang, langkah pertama adalah membuat daftar lengkap utangmu dan menetapkan prioritas pembayaran berdasarkan suku bunga tertinggi. Buat rencana anggaran yang terinci untuk mengelola pengeluaran dan alokasikan sebagian pendapatanmu untuk membayar utang. Pertimbangkan konsolidasi utang, negosiasi dengan kreditor, dan berhenti menggunakan kartu kredit untuk menghindari tambahan utang. Selalu bayar utang tepat waktu dan pertimbangkan mencari sumber pendapatan tambahan. Edukasi finansial juga penting agar kamu dapat membuat keputusan finansial yang lebih bijak di masa depan. Jika merasa kesulitan, bantuan dari penasehat keuangan atau konselor utang bisa memberikan panduan dan dukungan tambahan untuk mengatasi masalah keuanganmu."],
+        "harga naik": [
+            "Jika kamu merasa pusing karena kenaikan harga barang, ada beberapa langkah yang bisa diambil untuk mengelola dampak finansialnya. Pertama, perbarui dan sesuaikan anggaran pribadi atau keluarga untuk mencerminkan perubahan biaya hidup. Prioritaskan pengeluaran dan fokus pada kebutuhan dasar seperti makanan, tempat tinggal, dan kesehatan. Cari cara untuk menghemat uang, seperti membandingkan harga, memanfaatkan diskon, atau mencari alternatif produk yang lebih terjangkau. Selain itu, pertimbangkan untuk mencari sumber pendapatan tambahan atau peluang penghematan. Jika kenaikan harga sangat membebani, pertimbangkan untuk berkonsultasi dengan penasehat keuangan untuk mendapatkan saran khusus mengenai situasi finansialmu. Edukasi finansial juga dapat membantu kamu membuat keputusan yang lebih baik dalam menghadapi tantangan ekonomi ini. "
+        ],
+        "saya masih belum paham" : ["Tidak masalah. Mungkin Anda dapat memulai dengan langkah-langkah sederhana seperti membuat daftar prioritas keuangan, menetapkan tujuan keuangan jangka pendek dan panjang, serta mencari cara untuk meningkatkan pendapatan atau mengurangi pengeluaran. Jika masih bingung, pertimbangkan untuk mencari bantuan dari penasehat keuangan untuk panduan lebih lanjut."]
+    },
+    "context": [""]
+},
+
+{"tag": "terimakasih",
+"patterns": [" terimakasih", "makasih"],
+"responses": ["Terimakasih kembali! Semoga saran yang saya berikan dapat membantumu cepat menyelesaikan beban pikiranmu!"],
+"context": [""]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+}
+
